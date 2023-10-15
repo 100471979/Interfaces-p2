@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./script/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@500;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoy-Grill login</title>
+    <link rel="stylesheet" href="css/style-login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="formulario">
+            <h1>Regístrate</h1>
+            <p id="demo"></p>
+            <form id="form">
+                <div class="input-box">
+                    <div class="input-field">
+                        <span class="icono">
+                            <ion-icon name="id-card">
+                            </ion-icon>
+                        </span>
+                        <input type="text" id="DNI" required>
+                        <label>DNI</label>
+                    </div>
+                    <div class="input-field">
+                        <span class="icono">
+                            <ion-icon name="person-circle">
+                            </ion-icon>
+                        </span>
+                        <input type="text" id= "nombre" required>
+                        <label>Nombre</label>
+                    </div>
+                    <div class="input-field">
+                        <span class="icono">
+                            <ion-icon name="call">
+                            </ion-icon>
+                        </span>
+                        
+                        <input type="text" id="telefono" required>
+                        <p id="demo"></p>
+                        <label>Teléfono</label>
+                        
+                    </div>
+                    <div class="input-field">
+                        <span class="icono">
+                            <ion-icon name="mail">
+                            </ion-icon>
+                        </span>
+                        <input type="text" id= "correo" required>
+                        <label>Correo</label>
+                    </div>
+                </div>
+            <div class="botones">
+                
+                <button type="submit" onclick="Verificar(event)">Aceptar</button>
+                <button type="button">Cancelar</button>
+                <button type="button" onclick="limpiarCampos()">Clear</button>
+            </div>
+            
+            </form>
+
+        </div>
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
