@@ -75,15 +75,16 @@
     transition: .5s;
 }
 
-.input-field input:focus~label
+.input-field input:focus~label /*si se hace click en el campo las etiquetas subiran 5px*/
 {
     top: -5px;
 }
 
-.input-field input:valid~label
+.input-field input:valid~label /*las etiquetas permanecerán arriba si hay texto escrito en los campos*/
 {
     top: -5px;
 }
+
 .input-field .icono{
     position: absolute;
     right: 8px;
@@ -108,7 +109,6 @@
     transition: opacity 0.25s;
     margin-right: 10px;
 }
-
 .botones button:hover{
     opacity: 0.8;
 }
