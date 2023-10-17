@@ -18,35 +18,35 @@ body{
     font-family: 'Onest', sans-serif;
 }
 
-.container{
+.bread-crumbs{
     position: absolute;
-    top: 10%;
+    top: 8%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.container ul{
+.bread-crumbs ul{
     display: flex;
 
 }
 
-.container ul li{
+.bread-crumbs ul li{
     width: 100px;
     margin-right: 100px;
     position: relative;
     
 }
-.container ul li:first-child{
+.bread-crumbs ul li:first-child{
     margin-left: 100px;
 }
 
-.container ul li a{
+.bread-crumbs ul li a{
     text-align: center;
     color: white;
     font-size: 18px;
 }
 
-.container ul li a .icono{
+.bread-crumbs ul li a .icono{
     display: block;
     width: 80px;
     height: 80px;
@@ -60,10 +60,10 @@ body{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
 }
 
-.container ul li:before{
+.bread-crumbs ul li:before{
     content: ">";
     position: absolute;
-    top: 15%;
+    top: 5%;
     right: -55px;
     font-size: 50px;
     font-weight: bold;
@@ -71,17 +71,72 @@ body{
 
 }
 
-.container ul li:last-child::before{ /*quita la ultima flecha de la derecha*/
+.bread-crumbs ul li:last-child::before{ /*quita la ultima flecha de la derecha*/
     display: none;
 }
 
-.menu{
+img{
+    width: 350px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+
+}
+p{
+    text-align: center;
+    padding-top: 0 8px;
+
+}
+h2{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.seleccion{
     display: flex;
-    position: absolute;
-    top: 20%;
-    height: 77%;
-    left: 1.5%;
-    width: 97%;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.food{
+    position: relative;
+
+    width: 25%;
+
+    margin-top: 12%;
+    margin-left: 3%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px ;
     background-color: white;
-    border-radius: 10px;
+    border: 10px solid rgb(137, 33, 47);
+    transition: 0.4s;   
+}
+
+.food:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    transform: translate(0px, -8px);
+}
+button{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(137, 33, 47);
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.25s;
+    transition: color 0.25;
+    
+}
+button:active{
+    background-color: rgb(137, 33, 47);
+    color: white;
 }
