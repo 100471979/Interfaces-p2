@@ -21,19 +21,23 @@ body{
 .container{
     position: absolute;
     top: 10%;
-    left: 55%;
-
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .container ul{
     display: flex;
+
 }
 
 .container ul li{
     width: 100px;
     margin-right: 100px;
     position: relative;
+    
+}
+.container ul li:first-child{
+    margin-left: 100px;
 }
 
 .container ul li a{
@@ -69,4 +73,15 @@ body{
 
 .container ul li:last-child::before{ /*quita la ultima flecha de la derecha*/
     display: none;
+}
+
+.menu{
+    display: flex;
+    position: absolute;
+    top: 20%;
+    height: 77%;
+    left: 1.5%;
+    width: 97%;
+    background-color: white;
+    border-radius: 10px;
 }
