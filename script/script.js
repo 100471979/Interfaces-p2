@@ -1,4 +1,5 @@
-function limpiarCampos() {
+//inicio de sesión
+function limpiarCampos(){
     document.getElementById("form").reset();
 }
 
@@ -52,3 +53,6 @@ function Verificar(event) {
     }
     
 }
+
+//carrito
+

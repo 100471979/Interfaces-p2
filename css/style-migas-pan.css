@@ -19,12 +19,16 @@ body{
 
 .pagina{
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
 .bread-crumbs{
-  position: absolute;
+  position: relative;
   top: 8%;
   left: 50%;
-  transform: translate(-50%, -50%); /*centra*/
+  transform: translate(-50%, 0%); /*centra*/
   width: 100%;
   height: 10%;
 }
@@ -38,6 +42,7 @@ body{
     width: 100px;
     margin-right: 10%;
     position: relative;   
+
 }
 
 .bread-crumbs ul li:last-child{
@@ -49,6 +54,8 @@ body{
   color: white;
   font-size: 18px;
 }
+
+
 
 .bread-crumbs ul li a .icono{
   display: block;
@@ -64,12 +71,29 @@ body{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
 }
 
+.bread-crumbs ul li a .icono-carrito{
+  display: block;
+  width: 90%;
+  height: 70%;
+  margin: 0 auto 12px;
+  background-color: rgb(255, 255, 255);
+  line-height: 90px;
+  color: rgb(137, 33, 47);
+  border-radius: 50px;
+  font-size: 200%;
+  border: 3px solid;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+
 img{
   width: 350px;
   height: 200px;
   text-align: center;
   margin: 0 auto;
   display: block;
+  border-radius: 20px;
 }
 
 p{
@@ -91,7 +115,6 @@ h2{
 }
 
 .food{
-  position: relative;
   width: 25%;
   background-color: rgb(255, 255, 255);
   border: 15px solid rgb(137, 33, 47);
@@ -104,15 +127,6 @@ h2{
   transition: 0.4s;  
   box-sizing: border-box;
   float: left;
-}
-.food:first-child{
-  margin-top: 200px;
-}
-.food:nth-child(2){
-  margin-top: 200px;
-}
-.food:nth-child(3){
-  margin-top: 200px;
 }
 
 .food:hover{
@@ -132,7 +146,6 @@ button{
     transition: opacity 0.25s;
     margin-bottom: 10px;
     padding: 10px;
-    box-shadow: 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 button:active{
@@ -140,11 +153,59 @@ button:active{
   color: rgb(137, 33, 47);
 }
 
+header{
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+
+}
+
+
+.contenido-carrito{
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+.carrito-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.carrito-header h3{
+  font-size: 1.3rem;
+
+}
+
+.producto{
+  background-color: brown;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 0 14px 28px;
+  width: 25%;
+  padding-top: 10px;
+  border-radius: 20px;
+  
+}
+
 @media(max-width:1550px){
   .food{
       width: 45%;
   }
   .food:nth-child(3){
+    margin: 30px;
+  }
+
+  .producto{
+    width: 40%;
+  }
+  .producto:nth-child(3){
     margin: 30px;
   }
 }
@@ -156,13 +217,30 @@ button:active{
   .food:nth-child(2){
     margin: 30px;
   }
-}   
+
+}  
+
+@media(max-width:900px){
+  .producto{
+      width: 65%;
+  }
+  .producto:nth-child(2){
+    margin: 30px;
+  }
+
+} 
 
 @media(max-width:800px){
   .food{
       width: 100%;
   }
   .food:nth-child(2){
+    margin: 30px;
+  }
+  .producto{
+    width: 70%;
+  }
+  .producto:nth-child(2){
     margin: 30px;
   }
 }   
