@@ -137,7 +137,7 @@ p{
   transform: translate(0px, -8px);
 }
 
-button{
+.añadido{
     flex-basis: 48%;
     background: rgb(137, 33, 47);
     height: 40px;
@@ -195,6 +195,19 @@ header{
   padding-top: 10px;
   border-radius: 20px;
   
+}
+
+.trash{
+  background-color: brown;
+  color: black;
+  font-size: 30px;
+  outline: none;
+  border: none;
+}
+
+.trash :active{
+  color: white;
+  background-color: brown;
 }
 
 @media(max-width:1550px){
