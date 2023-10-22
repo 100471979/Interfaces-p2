@@ -116,7 +116,7 @@
                 </li>
     
                 <li>
-                <a href="#tu-carrito">
+                <a href="#nada">
                     <span class="icono">
                         <ion-icon name="card"></ion-icon>
                     </span>
@@ -125,7 +125,7 @@
                 </li>
     
                 <li>
-                <a href="#">
+                <a href="#completado" id="enlace-completado">
                     <span class="icono">
                         <ion-icon name="bag-check"></ion-icon>
                     </span>
@@ -133,7 +133,7 @@
                 </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#nada">
                         <span class="icono-carrito" id="icono-carrito">
                             <ion-icon name="cart-outline"></ion-icon>
                         </span>
@@ -142,7 +142,7 @@
                 </li>
             </ul>
         </div>
-        <header class="carrito-header" id="tu-carrito">
+        <header class="carrito-header" id="tu-carrito" >
             <h3>Tu carrito</h3>
         </header>
         <div class="contenido-carrito">
@@ -227,7 +227,68 @@
                 </div>   
             </div>
         </div>
-        <p class="precio-total">Total: €<span id="precio-total">0</span></p>
+        <p class="precio-total">Total: €<span id="precio-total">0</span></p>       
+    </div>
+    <div class="completado" id="completado" style="display: none;">
+        <div class="bread-crumbs">
+            <ul>
+                <li>
+                <a href="#nada">
+                    <span class="icono">
+                        <ion-icon name="fast-food"></ion-icon>
+                    </span>
+                    <p>Menu</p>
+                </a>
+                </li>
+    
+                <li>
+                <a href="#nada">
+                    <span class="icono">
+                        <ion-icon name="card"></ion-icon>
+                    </span>
+                    <p>Revisar</p>
+                </a>
+                </li>
+    
+                <li>
+                <a href="#nada">
+                    <span class="icono">
+                        <ion-icon name="bag-check"></ion-icon>
+                    </span>
+                    <p>Completado</p>
+                </a>
+                </li>
+                <li>
+                    <a href="#nada">
+                        <span class="icono-carrito" id="icono-carrito">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <p id="total-productos2">0</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-less">
+            <div class="completado-contenido">
+            <div class="check">
+                <span class="icono-completado">
+                    <ion-icon name="checkmark-done">
+                    </ion-icon>
+                </span>
+            </div>
+            <h1>Tu pedido ha sido procesado correctamente y lo recibirás en 10 minutos.</h1>
+        </div>
+        <div class="contador">
+            <div class="contenedor-minutos">
+                <h3 class="minutos">Time</h3>
+                <h3>Minutos</h3>
+            </div>
+            <div class="contenedor-segundos">
+                <h3 class="segundos">Time</h3>
+                <h3>Segundos</h3>
+            </div>
+        </div>
+        </div>
         
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

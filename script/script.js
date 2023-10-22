@@ -59,18 +59,20 @@ var revisar = document.getElementById("revisar");
 var menu = document.getElementById("menu");
 var enlaceRevisar = document.getElementById("enlace-revisar");
 var enlaceMenu = document.getElementById("enlace-menu");
+var completado = document.getElementById("completado");
+var enlaceCompletado = document.getElementById("enlace-completado");
 
 enlaceRevisar.addEventListener("click", function(){
     menu.style.display = "none";
     revisar.style.display = "block";
-
 });
 
 enlaceMenu.addEventListener("click", function(){
     menu.style.display = "block";
     revisar.style.display = "none";
-
 });
+
+
 
 //botones añadir y quitar productos
 var totalProductos = document.getElementById("total-productos");
@@ -121,4 +123,51 @@ trash.forEach(function(boton){
         var producto = boton.id.replace("trash", "");
         añadir_quitar(producto, -1);
     });
+});
+
+
+
+//contador
+
+enlaceCompletado.addEventListener('click', function(event){
+    var precioTotalNumerico = parseFloat(precioTotal.textContent);
+    if (precioTotalNumerico > 0){
+        completado.style.display ="block";
+        revisar.style.display = "none";
+        let tiempoSegundos = 600;
+        let minutosTexto = document.querySelector(".minutos");
+        let segundosTexto = document.querySelector(".segundos");
+
+        function contador(){
+            const minutos = Math.floor(tiempoSegundos / 60);
+            const segundos = tiempoSegundos % 60;
+
+            minutosTexto.style.transform = "scale(1.2)";
+            segundosTexto.style.transform = "scale(1.2)";
+            
+            minutosTexto.textContent = minutos;
+            segundosTexto.textContent = segundos < 10 ? '0' + segundos: segundos;
+
+            setTimeout(() => {
+                minutosTexto.style.transform = "scale(1)";
+                segundosTexto.style.transform = "scale(1)";
+            }, 100);
+
+            if(tiempoSegundos === 0){
+                clearInterval(Intervalo);
+                minutosTexto.textContent = "0";
+                segundosTexto.textContent = "00";
+            }
+            else{
+                tiempoSegundos--;
+            }
+        }
+
+        contador();
+        const Intervalo = setInterval(contador, 1000);
+    }
+    else{  
+        alert("Debes tener al menos un producto en tu cesta para procesar el pedido.");
+        event.preventDefault();
+    }
 });

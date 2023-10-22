@@ -106,6 +106,7 @@ p{
   font-size: 25px;
   padding-top: 10px;
   font-weight: bold;
+  background-color: white;
 }
 
 .platos{
@@ -114,6 +115,7 @@ p{
   width: 100%;
   justify-content: center;
   align-items: center;
+  
   
 }
 
@@ -167,8 +169,6 @@ header{
 .contenido-carrito{
   display: flex;
   flex-wrap: wrap;
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -208,6 +208,59 @@ header{
 .trash :active{
   color: white;
   background-color: brown;
+}
+
+.header-less{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.check{
+  display: flex;
+  width: 130px;
+  height: 130px;
+  background-color: rgb(255, 255, 255);
+  border: 10px solid rgb(137, 33, 47);
+  border-radius: 100px;
+  justify-content: center;
+}
+.icono-completado{
+  font-size: 500%;
+  color: rgb(137, 33, 47);
+  margin-top: 15px;
+}
+.completado-contenido{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 15px solid rgb(137, 33, 47);
+  margin: 30px;
+  text-align: center;
+  border-radius: 20px;
+  padding-top: 10px;
+  box-shadow: 0 14px 28px;
+
+}
+
+.contador{
+  display: flex;
+  justify-content: center;  
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 15px solid rgb(137, 33, 47);
+  margin: 30px;
+  text-align: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  padding-top: 10px;
+  box-shadow: 0 14px 28px;
+}
+
+.minutos, .segundos{
+  font-size: 3rem;
 }
 
 @media(max-width:1550px){
