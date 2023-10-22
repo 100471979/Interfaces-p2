@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Onest', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(81, 9, 19, 0.8), rgba(85, 12, 22, 0.8)), url(../img/login-bckgrnd.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-family: 'Onest', sans-serif;
+}
+
+.navbar{
+    height: 11%;
+    position: fixed;
+    bottom: 80;
+    left: 0;
+    right: 0;
+    background-color: rgb(132, 42, 54);
+    border: 3px solid rgb(162, 109, 81);
+    z-index: 1;
+  
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: right;
+    align-items: left;
+  }
+  .navbarlink
+  {
+    height: 100%;
+    flex-basis: 30%;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start; /* Alinea los elementos dentro de cada enlace a la izquierda */
+    justify-content: space-around;
+    transition: 0.3s ease;
+  }
+  
+  .navbarcontainer
+  {
+      height: 100%;
+  
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      transition: 0.3s ease;
+  }
+  
+  
+  .navbartext
+  {
+      color: rgb(233, 197, 177);
+  }
+  
+  .navbarimg {
+    float: left;
+    max-width: 65px; 
+    max-height: 65px;
+    margin-left: 5%;
+    margin-right: 5%;
+      
+  
+  }
+
+
+
+.formulario {
+    width: 100%;
+    max-width: 450px;
+    top: 55%;
+    position: absolute;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 60px 65px 65px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.formulario h1 {
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: rgb(137, 33, 47);
+    position: relative;
+}
+
+.formulario h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: rgb(137, 33, 47);
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+
+.ubicacion {
+    width: 100%;
+    max-width: 450px;
+    top: 25%;
+    position: absolute;
+    left: -70%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 10px 20px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.ubicaciontext
+{
+    color: rgb(233, 197, 177);
+}
+
+.ubicacionimg {
+    float: center;
+    max-width: 65px; 
+    max-height: 65px;
+    margin-left: 25%;
+    margin-right: 50%;
+      
+  
+  }
+.ubicacionlink
+{
+  height: 100%;
+  flex-basis: 30%;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; /* Alinea los elementos dentro de cada enlace a la izquierda */
+  justify-content: space-around;
+  transition: 0.3s ease;
+}
+
+
+
+.redes {
+    width: 150;
+    max-width: 450px;
+    top: 75%;
+    position: absolute;
+    left: -70%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 10px 20px 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.redestext
+{
+    color: rgb(233, 197, 177);
+}
+
+.redesimg {
+    float: left;
+    max-width: 65px; 
+    max-height: 65px;
+    margin-left: 5%;
+    margin-right: 5%;
+      
+  
+  }
+.redeslink
+{
+  height: 100%;
+  flex-basis: 30%;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start; /* Alinea los elementos dentro de cada enlace a la izquierda */
+  justify-content: space-around;
+  transition: 0.3s ease;
+}
+
+.input-field {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(137, 33, 47);
+    margin: 30px 0;
+}
+
+.input-field input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    transition: .5s;
+}
+
+.input-field input:focus~label {
+    top: -5px;
+}
+
+.input-field input:valid~label {
+    top: -5px;
+}
+
+.input-field .icono {
+    position: absolute;
+    right: 8px;
+    line-height: 57px;
+}
+
+.botones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones button {
+    flex-basis: 48%;
+    background: rgb(137, 33, 47);
+    height: 40px;
+    color: aliceblue;
+    border-radius: 20px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    transition: opacity 0.25s;
+    margin-right: 10px;
+}
+
+.botones button:hover {
+    opacity: 0.8;
+}
+
+#demo {
+    font-weight: 600;
+    color: red;
+}
+
+
