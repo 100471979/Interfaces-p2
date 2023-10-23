@@ -8,38 +8,31 @@
     <title>Restaurante</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 <body>
   
-  <div class="footer">    
-    <a href="mailto:100475965@alumnos.uc3m.es" class="foterlink">
-      <div class="footercontainer">
-          <img alt="Reserva" class="footerimg" src="./img/correo.png">
-          
-      </div>
-    </a>
-    <a href="https://www.google.es/maps/preview" class="foterlink">
-      <div class="footercontainer">
-          <img alt="Ubicacion" class="footerimg" src="./img/ubicacion.png">
-          
-      </div>
-    </a>
-    <a href="https://www.instagram.com/" class="footerlink">
-      <div class="footercontainer">
-          <img alt="Instagram" class="footerimg" src="./img/instagram.png">        
-      </div>
-    </a>    
-  </div>
-
   <div class="super-container">
     <div class="espacio"></div>  
-    <div class="navbar">
-      <img src="./img/savoy-grill.png" alt="">
-      <a href="#Menu">Menu</a>
-      <a href="#contact">Contact</a>
-      <a href="#texto1">About</a>
-      <a href="#reservations">Reservations</a>
-    </div>    
+    <header class="header1">
+      <img class="logo" src="../img/savoy-grill.png" alt="">
+      <button class="abrir" id="abrir">
+          <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <div class="nav1" id="nav1">
+          <button class="cerrar" id="cerrar">
+              <ion-icon name="close-outline"></ion-icon>    
+          </button>
+          <ul class="nav-list1">
+              <li><a href="#texto1">Sobre Nosotros</a></li>
+              <li><a href="#texto2">Cocina</a></li>
+              <li><a href="#texto3">Para llevar</a></li>
+              <li><a href="./log-in.html">Regístrate</a></li>
+              <li><a href="./menu.html">Menu</a></li>
+              <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+    </header>    
     <div class="container2">
       <div class="carousel1">
         <div class="carousel">
@@ -111,8 +104,36 @@
     </div>
 
     <div class="container4">
-      <div class="galeria3">
-
+      <div class="carousel1">
+        <div class="carousel">
+          <div class="carousel-item">
+            <img src="./img/comida1.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/comida2.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/comida3.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/comida4.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/comida5.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/comida6.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/comida7.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/comida8.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/comida9.jpg" alt="">
+          </div>
+        </div>      
       </div>
       <div id="texto3">
         <h1>Para llevar</h1>
@@ -137,12 +158,34 @@
       <div>
     </div>
   </div>
+  <div class="footer">    
+    <a href="mailto:100475965@alumnos.uc3m.es" class="foterlink">
+      <div class="footercontainer">
+          <img alt="Reserva" class="footerimg" src="./img/correo.png">
+          
+      </div>
+    </a>
+    <a href="https://www.google.es/maps/preview" class="foterlink">
+      <div class="footercontainer">
+          <img alt="Ubicacion" class="footerimg" src="./img/ubicacion.png">
+          
+      </div>
+    </a>
+    <a href="https://www.instagram.com/" class="footerlink">
+      <div class="footercontainer">
+          <img alt="Instagram" class="footerimg" src="./img/instagram.png">        
+      </div>
+    </a>    
+  </div>
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script>
     $(document).ready(function(){
     $('.carousel1').carousel();
     });
   </script>
+  <script src="./script/script-menu-hamburguesa.js"></script>
 </body>
 </html>
