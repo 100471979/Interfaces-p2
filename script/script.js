@@ -54,6 +54,8 @@ function Verificar(event) {
     
 }
 
+
+
 //ocultar pasos del bread-crumbs
 var revisar = document.getElementById("revisar");
 var menu = document.getElementById("menu");
@@ -71,8 +73,6 @@ enlaceMenu.addEventListener("click", function(){
     menu.style.display = "block";
     revisar.style.display = "none";
 });
-
-
 
 //botones añadir y quitar productos
 var totalProductos = document.getElementById("total-productos");
@@ -128,7 +128,6 @@ trash.forEach(function(boton){
 
 
 //contador
-
 enlaceCompletado.addEventListener('click', function(event){
     var precioTotalNumerico = parseFloat(precioTotal.textContent);
     if (precioTotalNumerico > 0){
