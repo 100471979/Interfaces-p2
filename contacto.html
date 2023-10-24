@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/style-contacto.css"> <!-- Asegúrate de tener un archivo CSS para esta página -->
 </head>
 <body>
+    
+  
+ 
     <div class="navbar">  
         <img src="./img/savoy-grill.png" alt="">
           
@@ -19,10 +22,14 @@
                   <img alt="Instagram" class="navbarimg" src="./img/instagram.png">        
               </div>
             </a>  
-       
+                  
     </div>
-   
+    
+        
+    
+    
     <div class="container">
+
         <div class="formulario">
             <h1>Más información</h1>
             <p id="demo"></p>
@@ -44,6 +51,7 @@
                         </span>
                         
                         <input type="text" id="telefono" required>
+                        <p id="demo"></p>
                         <label>Correo Electrónico</label>
                         
                     </div>
@@ -56,37 +64,46 @@
                         <label>Mensaje</label>
                     </div>
                 </div>
-            </form>
-            <div class="botones">              
+            <div class="botones">
+                
                 <button type="submit" onclick="Verificar(event)">Aceptar</button>
                 <button type="button">Cancelar</button>
                 <button type="button" onclick="limpiarCampos()">Clear</button>
             </div>
-        </div>  
+            
+            
+
+
+
+
         <div class="redes">
             <h1>Ven a visitarnos</h1>
-                                                       
-            <a href="https://www.google.es/maps/preview" class="ubicacionlink">
-                <div class="ubicacioncontainer">
-                    <img alt="Ubicacion" class="ubicacionimg" src="./img/ubicacion.png">
-                            
-                </div>
-            </a>
                         
-            <br><p>Calle Alcalá, 33</p>
+                                        
+              <a href="https://www.google.es/maps/preview" class="ubicacionlink">
+                  <div class="ubicacioncontainer">
+                     <img alt="Ubicacion" class="ubicacionimg" src="./img/ubicacion.png">
+                                
+                  </div>
+              </a>
+                        
+              <br><p>Calle Alcalá, 33</p>
                        
                     
         </div>
 
+                
         <div class="ubicacion">
-          <h1>Contacto</h1>               
+          <h1>Contacto</h1>
+                        
+                        
             <a href="https://www.whatsapp.com/" class="ubicacionlink">
                 <div class="ubicacioncontainer">
                    <img alt="whatsapp" class="ubicacionimg" src="./img/whatsapp.png">        
                 </div>
             </a>
             <p>615817741</p>     
-        </div>                        
-    </div>   
-</body>    
-</html>  
+        </div>
+                         
+</body>
+</html>
