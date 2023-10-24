@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <script src="script/script.js"></script>
@@ -43,7 +43,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <span class="icono-carrito" id="icono-carrito">
+                        <span class="icono-carrito">
                             <ion-icon name="cart-outline"></ion-icon>
                         </span>
                         <p id="total-productos">0</p>
@@ -57,48 +57,48 @@
                 <h2>Ceviche de Mariscos en Jardín de Sabores Exóticos</h2>
                 <p>El pescado de temporada más fresco, laminado en finas lonchas, maridado con limón y aderezado con la mezcla perfecta de especias.</p>
                 <h3>70.00€</h3>
-                <button class="añadido" id="añadido1">Añadir al carrito</button>
-                <button class="añadido" id="quitar1">Quitar del carrito</button>
+                <button class="añadido" id="añadido1" data-nombre="Ceviche">Añadir al carrito</button>
+                <button class="añadido" id="quitar1" data-nombre="Ceviche">Quitar del carrito</button>
             </div>
             <div class="food">
                 <img src="./img/comida2.jpg" alt="articulo 2 del menu">
                 <h2>Gnocchis Primavera Tostados en Éxtasis Vegetal</h2>
                 <p>Gnocchis hechos a mano en una cama de puré de guisantes adornados por una selección de verduras de primavera frescas y crocantes</p>
                 <h3>50.00€</h3>
-                <button class="añadido" id="añadido2">Añadir al carrito</button>
-                <button class="añadido" id="quitar2">Quitar del carrito</button>
+                <button class="añadido" id="añadido2" data-nombre="Gnocchis">Añadir al carrito</button>
+                <button class="añadido" id="quitar2" data-nombre="Gnocchis">Quitar del carrito</button>
             </div>
             <div class="food">
                 <img src="./img/comida9.jpg" alt="articulo 2 del menu">
                 <h2>Cordero de Montaña Glaseado en Esencia de la Tierra</h2>
                 <p>Pierna de cordero cocinada a fuego lento tierna, jugosa y llena de sabor con una fina capa de glaseado que realza su dulzura natural</p>
                 <h3>85.00€</h3>
-                <button class="añadido" id="añadido3">Añadir al carrito</button>
-                <button class="añadido" id="quitar3">Quitar del carrito</button>
+                <button class="añadido" id="añadido3" data-nombre="Cordero">Añadir al carrito</button>
+                <button class="añadido" id="quitar3" data-nombre="Cordero">Quitar del carrito</button>
             </div>
             <div class="food">
                 <img src="./img/comida3.jpg" alt="articulo 2 del menu">
                 <h2>Ostras de la Costa en Delicias Marinas</h2>
                 <p>Ostras frescas seleccionadas a mano acompañadas de mignonette de chalotas, preparado con vinagre de vino blanco y pimienta.</p>
                 <h3>50.00€</h3>
-                <button class="añadido" id="añadido4">Añadir al carrito</button>
-                <button class="añadido" id="quitar4">Quitar del carrito</button>
+                <button class="añadido" id="añadido4" data-nombre="Ostras">Añadir al carrito</button>
+                <button class="añadido" id="quitar4" data-nombre="Ostras">Quitar del carrito</button>
             </div>
             <div class="food">
                 <img src="./img/comida8.jpg" alt="articulo 2 del menu">
                 <h2>Tartaleta de Uva Confitada Realzada en Delicadeza Dulce</h2>
                 <p>Uvas frescas de las mejores cosechas en reducción de vino Moscatel posadas sobre una base de la tartaleta, crujiente y dorada.</p>
                 <h3>20.00€</h3>
-                <button class="añadido" id="añadido5">Añadir al carrito</button>
-                <button class="añadido" id="quitar5">Quitar del carrito</button>
+                <button class="añadido" id="añadido5" data-nombre="Tartaleta de uvas">Añadir al carrito</button>
+                <button class="añadido" id="quitar5" data-nombre="Tartaleta de uvas">Quitar del carrito</button>
             </div>
             <div class="food">
                 <img src="./img/comida5.jpg" alt="articulo 2 del menu">
                 <h2>Éclair de Crema de Avellanas con Sorbete de Fresa</h2>
-                <p>El éclair, horneado a la perfección, con una masa crujiente rellena de una suave crema de avellanas acompañado de una bolita de helado de fresa.</p>
+                <p>Éclair, horneado a la perfección, con una masa crujiente rellena de una suave crema de avellanas acompañado de una bolita de helado de fresa.</p>
                 <h3>35.00€</h3>
-                <button class="añadido" id="añadido6">Añadir al carrito</button>
-                <button class="añadido" id="quitar6">Quitar del carrito</button>
+                <button class="añadido" id="añadido6" data-nombre="Éclair">Añadir al carrito</button>
+                <button class="añadido" id="quitar6" data-nombre="Éclair">Quitar del carrito</button>
             </div>
         </div>
     </div>
@@ -134,7 +134,7 @@
                 </li>
                 <li>
                     <a href="#nada">
-                        <span class="icono-carrito" id="icono-carrito">
+                        <span class="icono-carrito" >
                             <ion-icon name="cart-outline"></ion-icon>
                         </span>
                         <p id="total-productos2">0</p>
@@ -152,7 +152,7 @@
                     <h5>Ceviche de Mariscos en Jardín de Sabores Exóticos</h5>
                     <p>€ <span id="precio-producto1">70.00</span></p>
                     <p>Cantidad: <span id="cantidad_plato1">0</span></p>
-                    <button class="trash" id="trash1">
+                    <button class="trash" id="trash1" data-nombre="Ceviche">
                         <span class="icono">
                             <ion-icon name="trash-outline"></ion-icon>
                         </span>
@@ -166,7 +166,7 @@
                     <h5>Gnocchis Primavera Tostados en Éxtasis Vegetal</h5>
                     <p>€ <span id="precio-producto2">50.00</span></p>
                     <p>Cantidad: <span id="cantidad_plato2">0</span></p>
-                    <button class="trash" id="trash2">
+                    <button class="trash" id="trash2" data-nombre="Gnocchis">
                         <span class="icono">
                             <ion-icon name="trash-outline"></ion-icon>
                         </span>
@@ -180,7 +180,7 @@
                     <p>€ <span id="precio-producto3">85.00</span></p>
                     <p>Cantidad: <span id="cantidad_plato3">0</span></p>
                     <button class="trash">
-                        <span class="icono" id="trash3">
+                        <span class="icono" id="trash3" data-nombre="Cordero">
                             <ion-icon name="trash-outline"></ion-icon>
                         </span>
                     </button>
@@ -192,7 +192,7 @@
                     <h5>Ostras de la Costa en Delicias Marinas</h5>
                     <p>€ <span id="precio-producto4">50.00</span></p>
                     <p>Cantidad: <span id="cantidad_plato4">0</span></p>
-                    <button class="trash" id="trash4">
+                    <button class="trash" id="trash4" data-nombre="Ostras">
                         <span class="icono">
                             <ion-icon name="trash-outline"></ion-icon>
                         </span>
@@ -205,7 +205,7 @@
                     <h5>Tartaleta de Uva Confitada Realzada en Delicadeza Dulce</h5>
                     <p>€ <span id="precio-producto5">20.00</span></p>
                     <p>Cantidad: <span id="cantidad_plato5">0</span></p>
-                    <button class="trash" id="trash5">
+                    <button class="trash" id="trash5" data-nombre="Tartaleta de uva">
                         <span class="icono">
                             <ion-icon name="trash-outline"></ion-icon>
                         </span>
@@ -219,7 +219,7 @@
                     <h5>Éclair de Crema de Avellanas con Sorbete de Fresa</h5>
                     <p>€ <span id="precio-producto6">35.00</span></p>
                     <p>Cantidad: <span id="cantidad_plato6">0</span></p>
-                    <button class="trash" id="trash6">
+                    <button class="trash" id="trash6" data-nombre="Éclair">
                         <span class="icono">
                             <ion-icon name="trash-outline"></ion-icon>
                         </span>
@@ -260,10 +260,10 @@
                 </li>
                 <li>
                     <a href="#nada">
-                        <span class="icono-carrito" id="icono-carrito">
+                        <span class="icono-carrito">
                             <ion-icon name="cart-outline"></ion-icon>
                         </span>
-                        <p id="total-productos2">0</p>
+                        <p id="total-productos3">0</p>
                     </a>
                 </li>
             </ul>

@@ -1,58 +1,4 @@
-//inicio de sesión
-function limpiarCampos(){
-    document.getElementById("form").reset();
-}
 
-function FormatoDNI(dni){
-
-    let digito = dni.slice(0, 8);
-    let letra = dni.charAt(8).toUpperCase();
-    let letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
-    let resto = digito % 23;
-    let macth = letras.charAt(resto);
-    return letra == macth;
-
-}
-function Verificar(event) {
-    regex_correo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-    regex_nombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/; /*expresion regular que verifica que el nombre no contenga numeros ni caracteres especiales*/
-    event.preventDefault();
-    let correo = document.getElementById("correo").value;
-    let nombre = document.getElementById("nombre").value;
-    let dni = document.getElementById("DNI").value;
-    let telefono = document.getElementById("telefono").value;
-    if (dni == ""){
-        document.getElementById("demo").innerHTML = "Ingrese su DNI";
-    }
-    else if(dni.length != 9 || FormatoDNI(dni) == false){
-        document.getElementById("demo").innerHTML = "Formato incorrecto del DNI"
-    }
-    
-    else if(nombre == ""){
-        document.getElementById("demo").innerHTML = "Ingrese su nombre"
-    }
-    else if(regex_nombre.test(nombre) == false){
-        document.getElementById("demo").innerHTML = "Nombre no válido"
-    }
-    else if(telefono == ""){
-        document.getElementById("demo").innerHTML = "Ingrese su número de teléfono"
-    }
-    else if(isNaN(telefono) || telefono.length != 9){
-        document.getElementById("demo").innerHTML = "El campo teléfono debe ser un número de 9 cifras";
-
-    }
-    else if( correo == ""){
-        document.getElementById("demo").innerHTML = "Ingrese su correo"
-    } 
-    else if( regex_correo.test(correo) == false){
-        document.getElementById("demo").innerHTML = "Formato del correo no válido"
-    }   
-    else{     
-        document.getElementById("demo").innerHTML = "";
-        document.getElementById("form").submit();
-    }
-    
-}
 
 
 
@@ -79,7 +25,7 @@ var totalProductos = document.getElementById("total-productos");
 var totalProductos2 = document.getElementById("total-productos2");
 var precioTotal = document.getElementById("precio-total");
 
-function añadir_quitar(producto, cantidad){
+function añadir_quitar(producto, cantidad, nombre){
     var carrito1 = parseInt(totalProductos.textContent);
     var carrito2 = parseInt(totalProductos2.textContent);
     var cantidad_plato = document.getElementById("cantidad_plato" + producto);
@@ -97,8 +43,14 @@ function añadir_quitar(producto, cantidad){
         cantidad_actual_plato += cantidad;
         cantidad_plato.textContent = cantidad_actual_plato;
     }
-    
-}  
+    var carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+    if (carrito[nombre] + cantidad >= 0) {
+        carrito[nombre] += cantidad;
+    } else {
+        carrito[nombre] = 0;
+    }
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
 
 var añadir = document.querySelectorAll("button[id^='añadido']");
 var quitar = document.querySelectorAll("button[id^='quitar']");
@@ -106,7 +58,8 @@ var trash = document.querySelectorAll("button[id^='trash']");
 añadir.forEach(function(boton){
     boton.addEventListener("click", function(){
         var producto = boton.id.replace("añadido", "");
-        añadir_quitar(producto, 1);
+        var nombreProducto = boton.getAttribute("data-nombre");
+        añadir_quitar(producto, 1, nombreProducto);
     });
 
 });
@@ -114,14 +67,16 @@ añadir.forEach(function(boton){
 quitar.forEach(function(boton){
     boton.addEventListener("click", function(){
         var producto = boton.id.replace("quitar", "");
-        añadir_quitar(producto, -1);
+        var nombreProducto = boton.getAttribute("data-nombre");
+        añadir_quitar(producto, -1, nombreProducto);
     });
 });
 
 trash.forEach(function(boton){
     boton.addEventListener("click", function(){
         var producto = boton.id.replace("trash", "");
-        añadir_quitar(producto, -1);
+        var nombreProducto = boton.getAttribute("data-nombre");
+        añadir_quitar(producto, -1, nombreProducto);
     });
 });
 
@@ -145,7 +100,7 @@ enlaceCompletado.addEventListener('click', function(event){
             segundosTexto.style.transform = "scale(1.2)";
             
             minutosTexto.textContent = minutos;
-            segundosTexto.textContent = segundos < 10 ? '0' + segundos: segundos;
+            segundosTexto.textContent = segundos < 10 ? '0' + segundos: segundos; //si los segundos son menores a 10 se agrega un 0 a la izquierda
 
             setTimeout(() => {
                 minutosTexto.style.transform = "scale(1)";
@@ -161,7 +116,6 @@ enlaceCompletado.addEventListener('click', function(event){
                 tiempoSegundos--;
             }
         }
-
         contador();
         const Intervalo = setInterval(contador, 1000);
     }
